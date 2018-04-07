@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
 MAINTAINER pozar
-ENV MINECRAFT_VERSION 1.9.2
+ENV MINECRAFT_VERSION 1.12.2
 
 RUN apt-get update
 
@@ -50,7 +50,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-EXPOSE 25565 25575 80
+EXPOSE 25565 25575 8080
 
 VOLUME /data /map
 
